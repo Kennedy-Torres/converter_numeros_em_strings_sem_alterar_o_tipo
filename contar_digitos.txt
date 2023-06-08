@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+
+
+typedef struct{
+    float peso;
+} PRODUTO;
+
+int contarPosicoes(float numero) {
+    char buffer[16]; // Definindo um buffer para armazenar a representação do número como string
+    sprintf(buffer, "%.2f", numero); // Formata o número com duas casas decimais e armazena em buffer
+    return strlen(buffer); // Retorna o tamanho da string
+}
+
+int main() {
+    float numero = 60099.23; // produto[i].peso
+    int posicoes = contarPosicoes(numero); 
+    printf("O numero %.2f possui %d posicoes apos a virgula.\n", numero, posicoes);
+    return 0;
+}
